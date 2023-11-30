@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: rgb(66, 135, 245);">
+    <div id="fondo" style="box-shadow: 3px 2px 5px black; border: 1px solid black;border-radius:4px ; background:whitesmoke ;height: 620px; width: 1400px; margin-left: 50px;margin-top: 10px;">
+        <footer style="text-align:center ;"><h1>Plancha de soldado para componentes SMD</h4></footer>
+        <div id="principal" style=" display: flex;">
+            <div id="panel" style="width: 30%; display:inline-block; border: 1px solid gray; height: 539px; padding-left: 20px;">
+                <form action="" method="get">
+                    <div style=" display: flex; padding-top: 20px;" >
+                        <div style="width: 50%; display:inline-block;">
+                            <div>
+                                <label for="KP">Kp<br></label>
+                                <input type="number" name="KP" id="KP" placeholder="100">    
+                            </div>
+    
+                            <div>
+                                <label for="KI">Ki<br></label>
+                                <input type="number" name="KI" id="KI" placeholder="200">
+                            </div>
+                            
+                            <div>
+                                <label for="KD">Kd<br></label>
+                                <input type="number" name="KD" id="KD" placeholder="10">    
+                            </div>
+    
+                            <div>
+                                <label for="et point">Set point <br></label>
+                                <input type="number" name="set" id="set" placeholder="">    
+                            </div>
+                        </div>
+                        <div style="width: 50%; display:inline-block;">
+                            <div style=" padding-top: 20px">
+                                <input type="checkbox" name="radioCerrar" id="radioCerrar" >    
+                                <label for="radioCerrar">Lazo cerrado</label>
+                            </div>
+                            <div style=" padding-top: 20px">
+                                <input type="checkbox" name="radioSoldar" id="radioSoldar">    
+                                <label for="radioSoldar">Soldar</label>
+                            </div>
+                            <div style=" padding-top: 20px">
+                                <input type="checkbox" name="radioAbierto" id="radioAbierto">    
+                                <label for="radioAbierto">Lazo abierto</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="contenedorBoton" style=" text-align: center;margin-top: 100px; margin-bottom: 100px;">
+                        <input type="button" value="Enviar datos" id="envioDatos" style="border-radius: 100px; background : rgb(66, 135, 245); color: whitesmoke; width: 170px; height: 50px; font-size: 20px; box-shadow: 2px 2px 5px gray; ">
+                    </div> 
+                </form>
+
+                <div>
+                    <label for="temp">temperatura actual <br></label>
+                    <input type="number" name="temp" id="temp" disabled>   
+                    <br>
+                </div>
+            </div>
+
+            <div id="grafica" style="width: 70%; display:inline-block;border: 1px solid gray; height: 539px;">
+                <canvas id="graph"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
